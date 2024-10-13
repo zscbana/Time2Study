@@ -1,0 +1,54 @@
+{% extends "main/base.html" %}
+{% block content %}
+
+<section id="tracks" class="section tracks">
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Popular Tracks</h2>
+        <p>Choose from our curated tracks designed to help you excel in various programming disciplines.</p>
+    </div>
+
+    <div class="container">
+        <div class="row gy-4">
+
+            <!-- Frontend Beginner Track -->
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+                <div class="track-item position-relative">
+                    <div class="icon"><i class="bi bi-code-slash icon"></i></div>
+                    <h4><a href="https://roadmap.sh/frontend?r=frontend-beginner" target="_blank" class="stretched-link">Frontend Beginner</a></h4>
+                    <p>Start your journey in front-end development.</p>
+                </div>
+            </div>
+
+            <!-- Backend Beginner Track -->
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+                <div class="track-item position-relative">
+                    <div class="icon"><i class="bi bi-database icon"></i></div>
+                    <h4><a href="https://roadmap.sh/backend?r=backend-beginner" target="_blank" class="stretched-link">Backend Beginner</a></h4>
+                    <p>Get started with back-end development.</p>
+                </div>
+            </div>
+
+            <!-- DevOps Beginner Track -->
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+                <div class="track-item position-relative">
+                    <div class="icon"><i class="bi bi-tools icon"></i></div>
+                    <h4><a href="https://roadmap.sh/devops?r=devops-beginner" target="_blank" class="stretched-link">DevOps Beginner</a></h4>
+                    <p>Learn about DevOps practices and tools.</p>
+                </div>
+            </div>
+
+            <!-- Frontend Track -->
+            <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+                <div class="track-item position-relative">
+                    <div class="icon"><i class="bi bi-code-slash icon"></i></div>
+                    <h4><a href="https://roadmap.sh/frontend" target="_blank" class="stretched-link">Frontend</a></h4>
+                    <p>Master front-end development.</p>
+                </div>
+            </div>
+
+            <!-- Add other tracks as necessary -->
+
+        </div>
+    </div>
+</section>
+{% endblock content %}
