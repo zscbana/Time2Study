@@ -28,3 +28,6 @@ def about(request):
 
 def roadmap(request):
     return render(request, 'main/roadmap.html', {'title': 'Roadmap'})
+
+def study(request):
+    return render(request, 'main/study.html', {'title': 'StudyTime'})

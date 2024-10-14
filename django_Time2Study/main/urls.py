@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='main-home'),
-    path('about/', views.about, name="main-about"),
-    path("roadmap/", views.roadmap, name="main-roadmap")
+    path('about/', views.about, name='main-about'),
+    path("roadmap/", views.roadmap, name='main-roadmap'),
+    path('study/', views.study, name='main-study')
 ]
