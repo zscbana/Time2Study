@@ -1,4 +1,84 @@
 {% extends "main/base.html" %}
+
 {% block content %}
-<h1> Time to study</h1>
+<h1>Time to Study</h1>
+
+<!-- Stopwatch HTML -->
+<div class="container">
+    <div id="stopwatch">00:00:00</div>
+    <button id="startButton" class="btn btn-primary btn-sm mt-1 mb-1">Start</button>
+    <button id="stopButton" class="btn btn-warning btn-sm mt-1 mb-1">Stop</button>
+    <button id="resetButton" class="btn btn-secondary btn-sm mt-1 mb-1">Reset</button>
+</div>
+
+<!-- Add CSS for styling -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    #stopwatch {
+        font-size: 48px;
+        margin: 20px;
+    }
+</style>
+
+<!-- Add JavaScript for functionality -->
+<script>
+    let timer;
+    let isRunning = false;
+    let elapsedTime = 0; // Time in seconds
+
+    const stopwatchDisplay = document.getElementById('stopwatch');
+    const startButton = document.getElementById('startButton');
+    const stopButton = document.getElementById('stopButton');
+    const resetButton = document.getElementById('resetButton');
+
+    function updateDisplay() {
+        const hours = Math.floor(elapsedTime / 3600);
+        const minutes = Math.floor((elapsedTime % 3600) / 60);
+        const seconds = elapsedTime % 60;
+        stopwatchDisplay.textContent = 
+            `${hours < 10 ? '0' : ''}${hours}:` + 
+            `${minutes < 10 ? '0' : ''}${minutes}:` + 
+            `${seconds < 10 ? '0' : ''}${seconds}`;
+    }
+
+    function startTimer() {
+        if (isRunning) return;
+        isRunning = true;
+        timer = setInterval(() => {
+            elapsedTime++;
+            updateDisplay();
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer);
+        isRunning = false;
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        elapsedTime = 0; // Reset time
+        isRunning = false;
+        updateDisplay();
+    }
+
+    startButton.addEventListener('click', startTimer);
+    stopButton.addEventListener('click', stopTimer);
+    resetButton.addEventListener('click', resetTimer);
+
+    updateDisplay(); // Initialize display
+</script>
+
 {% endblock content %}
