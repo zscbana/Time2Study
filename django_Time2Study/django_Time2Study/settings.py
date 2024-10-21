@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'timer.apps.TimerConfig',
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
     'crispy_forms',

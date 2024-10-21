@@ -25,9 +25,6 @@ def about(request):
 def roadmap(request):
     return render(request, 'main/roadmap.html', {'title': 'Roadmap'})
 
-def study(request):
-    return render(request, 'main/study.html', {'title': 'StudyTime'})
-
 class PostListView(ListView):
     model = Post
     template_name = 'main/home.html'
