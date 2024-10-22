@@ -1,49 +1,84 @@
 {% extends "main/base.html" %}
 {% block content %}
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <h1 class="display-4">About Edutrack</h1>
-            <p class="lead mt-3">
-                Welcome to Edutrack – a platform designed to help students maximize their productivity, manage their study time, and collaborate on academic growth.
-            </p>
-        </div>
-    </div>
+    <section id="mission" class="mt-5">
+        <h2 class="text-center">Our Mission</h2>
+        <p class="text-center" style="font-size: 1.2rem;">
+            At Edutrack, we're dedicated to empowering students with tools for effective time management and academic success. Together, we can unlock your full potential.
+        </p>
+    </section>
 
-    <div class="row mt-5">
-        <div class="col-lg-12">
-            <h2 class="text-center">Our Mission</h2>
-            <p class="text-center">
-                At Edutrack, we are committed to providing students with tools that foster effective time management and academic success. We believe that by offering a supportive community and resources, students can reach their full potential.
-            </p>
+    <section class="mt-5">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>User Authentication</h3>
+                        <p class="feature-description">Manage your account with ease and security.</p>
+                        <button class="btn btn-link toggle-btn">More Info</button>
+                        <p class="more-info" style="display: none;">User authentication ensures that your personal information is safe and accessible only to you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Post Sharing</h3>
+                        <p class="feature-description">Share study tips and productivity hacks with peers.</p>
+                        <button class="btn btn-link toggle-btn">More Info</button>
+                        <p class="more-info" style="display: none;">Engage with a community of learners by sharing your insights and learning from others.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Study Timer</h3>
+                        <p class="feature-description">Track your study sessions efficiently and effectively.</p>
+                        <button class="btn btn-link toggle-btn">More Info</button>
+                        <p class="more-info" style="display: none;">Stay focused and manage your time effectively with our intuitive study timer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Roadmaps</h3>
+                        <p class="feature-description">Access curated learning paths for academic success.</p>
+                        <button class="btn btn-link toggle-btn">More Info</button>
+                        <p class="more-info" style="display: none;">Follow structured roadmaps designed to guide you through your studies.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div class="row mt-5">
-        <div class="col-lg-6">
-            <h2>Key Features</h2>
-            <ul class="list-group">
-                <li class="list-group-item list-group-item-light">User Authentication: Manage your account with ease.</li>
-                <li class="list-group-item list-group-item-light">Post Sharing: Share study tips and productivity hacks.</li>
-                <li class="list-group-item list-group-item-light">Study Timer: Track your study sessions efficiently.</li>
-                <li class="list-group-item list-group-item-light">Roadmaps: Access curated learning paths for academic success.</li>
-            </ul>
-        </div>
-        <div class="col-lg-6">
-            <h2>Why Choose Edutrack?</h2>
-            <p>
-                We understand the challenges of maintaining a productive academic life. Our platform offers the tools you need to manage your study time effectively, stay on track with deadlines, and collaborate with peers to share valuable insights and strategies.
-            </p>
-        </div>
-    </div>
+    <section class="mt-5">
+        <p class="text-center" style="font-size: 1.2rem;">
+            We understand the challenges of maintaining a productive academic life. Our platform equips you with tools to manage your study time, stay on track, and collaborate with others.
+        </p>
+    </section>
 
-    <div class="row mt-5">
-        <div class="col-lg-12 text-center">
-            <h3>Get in Touch</h3>
-            <p>
-                Have questions or feedback? We'd love to hear from you. <a href="https://www.linkedin.com/in/omar-elbanna-z1/">Contact us</a> to help us improve your Edutrack experience!
-            </p>
-        </div>
-    </div>
+    <section class="mt-5">
+        <h3 class="text-center">Get in Touch</h3>
+        <p class="text-center">
+            Have questions or feedback? We’d love to hear from you. <a href="https://www.linkedin.com/in/omar-elbanna-z1/" class="text-primary">Contact us</a> to help enhance your Edutrack experience!
+        </p>
+    </section>
 </div>
+
+<script>
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const moreInfo = button.nextElementSibling;
+            if (moreInfo.style.display === 'none' || moreInfo.style.display === '') {
+                moreInfo.style.display = 'block';
+                button.textContent = 'Less Info';
+            } else {
+                moreInfo.style.display = 'none';
+                button.textContent = 'More Info';
+            }
+        });
+    });
+</script>
 {% endblock content %}
