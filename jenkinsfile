@@ -1,3 +1,56 @@
 pipeline {
-    
+    agent { label 'built-in' }
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/zscbana/Time2Study'
+            }
+        }
+        stage('Check Python')
+        {
+            steps {
+                sh 'python3 --version'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'cd django_Time2Study'
+                sh 'pip install --user -r requirements.txt'
+            }
+        }
+        stage('Unit Test') {
+            steps {
+                sh 'python manage.py test'
+            }
+        }
+        stage('run') {
+            steps {
+                sh 'python manage.py runserver'
+            }
+        }
+        stage('Docker Image') {
+            agent {
+                label 'AzureAgent'
+            }
+            steps {
+                script {
+                    git branch: 'main', url: 'https://github.com/zscbana/Time2Study'
+                    sh 'cd django_Time2Study'
+                    app = docker.build("omarbanna/AlxFinal:latest")
+                }
+            }
+        }
+        stage('Push The Image') {
+            agent {
+                label 'AzureAgent'
+            }
+            steps {
+                script {
+                    docker.withRegistry('https://index.docker.io/v1/', 'DockerHub') {
+                        app.push()
+                    }
+                }
+            }
+        }
+    }
 }
