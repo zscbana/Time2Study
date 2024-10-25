@@ -8,6 +8,7 @@ Welcome to the **Student Productivity Platform**, a full-stack web application b
 - **Register**: New users can create an account.
 - **Login**: Registered users can log into the platform.
 - **Profile Management**: Users can edit their profile, add a profile picture, and manage their account details.
+- **record your Study Sesstions**: 
 
 ### Posts Management
 - **Add Posts**: Users can share posts related to productivity and study techniques.
@@ -42,9 +43,67 @@ The main goal of this website is to improve student productivity by providing a 
 - Track their study sessions and performance over time.
 - Get insights into their study habits and improve them.
 
-## How to Run the Project
+## Steps of the Project
 
-1. **Clone the repository**:
+This section outlines the steps taken to develop the Student Productivity Platform, from project creation to deployment.
+
+1. **Create a Django Project**:
+   Start by creating a new Django project using the following command:
    ```bash
-   git clone https://github.com/yourusername/student-productivity-platform.git
-   cd student-productivity-platform
+   django-admin startproject myproject
+Create Django Apps: To manage different functionalities, create separate Django apps:
+
+- Main App (for posts management):
+```python manage.py startapp main```
+- Timer App (for tracking study sessions):
+```python manage.py startapp timer```
+- Users App (for user profile management):
+```python manage.py startapp users```
+- Define Models and Run Migrations: In each app's models.py, define your data models. After defining the models, create and apply migrations to set up the database:
+
+```python manage.py makemigrations
+python manage.py migrate
+```
+## Modify Views and URLs:
+
+- Update the views.py in each app to handle application logic and render templates.
+- Define URL patterns in urls.py to connect views to the appropriate routes.
+- Update Main Project Settings: Open settings.py in the project directory and add the newly created apps to the INSTALLED_APPS list:
+```
+INSTALLED_APPS = [
+    ...
+    'main',
+    'timer',
+    'users',
+]
+```
+- Create Template Files: Create a directory named templates in each app and add HTML files for rendering views. Ensure each template is structured to allow for easy reuse.
+
+- Set Up Static Files:
+
+- Create a directory for static files:
+``` mkdir -p static/main/css ```
+- Add a main.css file in static/main/css for styling, utilizing Bootstrap for responsive design.
+- Configure Media Files: Set up a media directory to store user-uploaded images and default profile pictures:
+
+- Create a Dockerfile: Develop a Dockerfile to containerize your application for development and deployment:
+
+- Set Up CI/CD with Jenkins and ArgoCD:
+
+- Create a Jenkinsfile for Continuous Integration to automate testing and builds.
+- Integrate ArgoCD for Continuous Deployment, allowing for easy deployment of changes to the application.
+Run the Application:
+
+- Build and run the Docker container to test the application locally:
+
+- docker build -t student-productivity-platform .
+- docker run -p 8001:8000 student-productivity-platform
+- Access the Application: Open your web browser and navigate to http://localhost:8001/ to view the running application.
+
+- Run Tests: After making changes, run tests to ensure everything is functioning correctly:
+
+
+```python manage.py test```
+- Deploy to Production: Once tested, deploy the application using your CI/CD pipeline for production use.
+
+- This structured approach will help ensure a smooth development process and facilitate collaboration among team members.
