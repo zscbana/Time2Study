@@ -42,10 +42,6 @@ Welcome to the **Student Productivity Platform**, a full-stack web application b
 - **Roadmaps**: Access detailed study roadmaps through the navigation bar.
 ![Screenshot 7](screenshots/Roadmap.png)
 
-Here's a revised version of your README section for clarity and consistency:
-
----
-
 ## Technologies Used
 
 ### Frontend:
