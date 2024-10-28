@@ -16,6 +16,7 @@ Welcome to the **Student Productivity Platform**, a full-stack web application b
 # ALX Final Project Grade
 ## ![Screenshot -1](screenshots/Final.png) 
 
+# Home Page
 ## ![Screenshot 0](screenshots/Home.png) 
 
 ## Features
