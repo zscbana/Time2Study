@@ -12,28 +12,32 @@ Welcome to the **Student Productivity Platform**, a full-stack web application b
   <img src="icons/Docker.png" alt="Docker Icon" style="width: 40px; height: 40px; border-radius: 50%; margin: 5px;">
 </div>
 
+## ![Screenshot 0](screenshots/Home.png) 
+
 ## Features
 
 ### User Authentication
 - **Register**: New users can create an account.
+![Screenshot 1](screenshots/Register.png)
 - **Login**: Registered users can log into the platform.
+![Screenshot 2](screenshots/Login.png)
 - **Profile Management**: Users can edit their profile, add a profile picture, and manage their account details.
-- **record your Study Sesstions**: 
+![Screenshot 3](screenshots/ProfileEdit.png)
 
 ### Posts Management
 - **Add Posts**: Users can share posts related to productivity and study techniques.
-- **Edit and Delete Posts**: Users can modify or delete their posts as needed.
+![Screenshot 4](screenshots/Createpost.png)
+- **Post Details, Edit and Delete Posts**: Users can modify or delete their posts as needed.
+![Screenshot 5](screenshots/Edit-Delete.png)
 - **Profile View**: Each user's profile displays their personal posts.
-- **Post Details**: Clicking on a post shows detailed information.
+![Screenshot 6](screenshots/ProfilePosts.png)
 
 ### Productivity Tools
 - **Roadmaps**: Access detailed study roadmaps through the navigation bar.
+![Screenshot 7](screenshots/Roadmap.png)
+
 - **Study Timer**: Use the built-in study timer to track study sessions and improve time management.
-  
-  _Coming Soon_:  
-  - Detailed study statistics for each user, such as:
-    - Study hours per week
-    - Monthly study performance
+![Screenshot 8](screenshots/Timer.png)
 
 ## Technologies Used
 
