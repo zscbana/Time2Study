@@ -2,6 +2,7 @@
 
 Welcome to the **Student Productivity Platform**, a full-stack web application built to enhance student productivity and help them manage their study time effectively. This platform allows students to connect with others, share productivity tips, and track their own progress.
 
+
 <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
   <img src="icons/ALX.png" alt="ALX Icon" style="width: 40px; height: 40px; border-radius: 50%; margin: 5px;">
   <img src="icons/Django.png" alt="Django Icon" style="width: 40px; height: 40px; border-radius: 50%; margin: 5px;">
@@ -11,6 +12,9 @@ Welcome to the **Student Productivity Platform**, a full-stack web application b
   <img src="icons/jenkins.png" alt="Jenkins Icon" style="width: 40px; height: 40px; border-radius: 50%; margin: 5px;">
   <img src="icons/Docker.png" alt="Docker Icon" style="width: 40px; height: 40px; border-radius: 50%; margin: 5px;">
 </div>
+
+# ALX Final Project Grade
+## ![Screenshot -1](screenshots/Final.png) 
 
 ## ![Screenshot 0](screenshots/Home.png) 
 
